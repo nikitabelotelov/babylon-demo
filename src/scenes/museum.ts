@@ -41,7 +41,7 @@ function initDemoBoxes(scene: Scene) {
     box2.physicsImpostor = new PhysicsImpostor(box2, PhysicsImpostor.BoxImpostor, { mass: 1, restitution: 0.0, friction: 2 }, scene);
 }
 
-class PhysicsSceneWithAmmo implements CreateSceneClass {
+class MuseumScene implements CreateSceneClass {
     preTasks = [ammoReadyPromise];
 
     createScene = async (engine: Engine, canvas: HTMLCanvasElement): Promise<Scene> => {
@@ -109,4 +109,4 @@ class PhysicsSceneWithAmmo implements CreateSceneClass {
     };
 }
 
-export default new PhysicsSceneWithAmmo();
+export default new MuseumScene();
